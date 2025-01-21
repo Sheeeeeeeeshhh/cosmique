@@ -1,0 +1,172 @@
+/* CSS for Cosmique Essence */
+body {
+    font-family: 'bauer bodoni','Times New Roman';
+    margin: 0;
+    padding: 0;
+    background-color: #365d8d;
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    color: #e2b817;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+header {
+    color: #e2b817;
+    padding: 20px 0;
+    margin-bottom: 20px;
+
+    display: flex;                /* Enable Flexbox */
+    flex-direction: column;       /* Stack h1 and p vertically */
+    align-items: center;          /* Center items horizontally */
+    justify-content: center;      /* Center items vertically */
+    text-align: center;           /* Center text inside both h1 and p */
+}
+
+header h1 {
+
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 10px;
+}
+
+header p {
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 5px 0 0 180PX;            /* Space between h1 and p */
+    text-align: center;           /* Center the text inside p */
+}
+
+header::after {
+    content: '';
+    display: block;
+    width: 85%;
+    height: 5px;
+    background-color: #ffffff;
+    margin-top:20px;
+}
+
+.header::after {
+    content: 'Explore Our Scents';
+    color: floralwhite;
+}
+
+.headertext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.headertext h1 {
+    margin: 0;
+}
+
+.headertext p {
+    margin: 20px 1400PX 0 0;
+    font-size: 1.5rem;
+}
+.female_label {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.female_label p {
+    margin: 20px 1380px 0 0;
+    font-size: 1.5rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 500px);  /* 3 columns for large screens */
+    gap: 20px;
+    padding: 20px;
+    max-width: fit-content;
+    margin: 0 auto;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 400px);  /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 400px;  /* 1 column for small screens */
+    }
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    height: 200px;
+}
+
+.card h2 {
+    letter-spacing: 4px;
+    font-size: 2.4rem;
+    color: #e2b817;
+    margin-bottom: 10px;
+}
+
+.card p {
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.card .attributes {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-top: 10px;
+}
+
+
+
+footer {
+
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.female{
+    background-color: #bd6973;
+}
+
+.male { 
+    background-color: #0b2545;
+}
+footer a {
+    color: #e2b817;
+    text-decoration: none;
+}
+
+footer p{
+    font-size: 1.5rem;
+}
+footer a:hover {
+    text-decoration: underline;
+}
