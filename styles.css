@@ -1,4 +1,4 @@
-/* CSS for Cosmique Essence */
+/* General Body */
 body {
     font-family: 'bauer bodoni','Times New Roman';
     margin: 0;
@@ -8,27 +8,19 @@ body {
     text-align: center;
 }
 
+/* Header Style */
 header {
     color: #e2b817;
     padding: 20px 0;
     margin-bottom: 20px;
-    position: relative;
-}
-
-header {
-    color: #e2b817;
-    padding: 20px 0;
-    margin-bottom: 20px;
-
-    display: flex;                /* Enable Flexbox */
-    flex-direction: column;       /* Stack h1 and p vertically */
-    align-items: center;          /* Center items horizontally */
-    justify-content: center;      /* Center items vertically */
-    text-align: center;           /* Center text inside both h1 and p */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 header h1 {
-
     margin: 0;
     font-size: 3rem;
     letter-spacing: 10px;
@@ -38,8 +30,8 @@ header p {
     letter-spacing: 5px;
     font-size: 1.5rem;
     color: #ffffff;
-    margin: 5px 0 0 180PX;            /* Space between h1 and p */
-    text-align: center;           /* Center the text inside p */
+    margin: 5px 0 0 0; /* Adjusted margin */
+    text-align: center;
 }
 
 header::after {
@@ -48,14 +40,10 @@ header::after {
     width: 85%;
     height: 5px;
     background-color: #ffffff;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
-.header::after {
-    content: 'Explore Our Scents';
-    color: floralwhite;
-}
-
+/* Header Text Below Header */
 .headertext {
     display: flex;
     flex-direction: column;
@@ -69,11 +57,12 @@ header::after {
 }
 
 .headertext p {
-    margin: 20px 1400PX 0 0;
+    margin: 20px 0;
     font-size: 1.5rem;
 }
+
+/* Female Label */
 .female_label {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,33 +71,34 @@ header::after {
 }
 
 .female_label p {
-    margin: 20px 1380px 0 0;
+    margin: 20px 0;
     font-size: 1.5rem;
 }
 
+/* Grid for Cards */
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 500px);  /* 3 columns for large screens */
+    grid-template-columns: repeat(3, 1fr); /* Automatically adjusts to available space */
     gap: 20px;
     padding: 20px;
-    max-width: fit-content;
+    max-width: 1200px;
     margin: 0 auto;
     align-items: center;
 }
 
 @media (max-width: 900px) {
     .container {
-        grid-template-columns: repeat(2, 400px);  /* 2 columns for medium screens */
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns for medium screens */
     }
 }
 
 @media (max-width: 600px) {
     .container {
-        grid-template-columns: 400px;  /* 1 column for small screens */
+        grid-template-columns: 1fr;  /* 1 column for small screens */
     }
 }
 
-
+/* Cards */
 .card {
     display: flex;
     flex-direction: column;
@@ -119,13 +109,17 @@ header::after {
     text-align: center;
     justify-content: center;
     align-items: center;
+    height: 200px; /* Increased height for cards */
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
 
-    height: 200px;
+.card:hover {
+    transform: translateY(-5px); /* Slight hover effect */
 }
 
 .card h2 {
     letter-spacing: 4px;
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: #e2b817;
     margin-bottom: 10px;
 }
@@ -137,36 +131,36 @@ header::after {
     line-height: 1.5;
 }
 
-.card .attributes {
-    font-size: 0.9rem;
-    color: #ddd;
-    margin-top: 10px;
+/* Card Background Colors */
+.female {
+    background-color: #bd6973;
 }
 
+.male {
+    background-color: #0b2545;
+}
 
-
+/* Footer Style */
 footer {
-
     color: #fff;
     padding: 10px 0;
     margin-top: 20px;
 }
 
-.female{
-    background-color: #bd6973;
-}
-
-.male { 
-    background-color: #0b2545;
-}
 footer a {
     color: #e2b817;
     text-decoration: none;
 }
 
-footer p{
+footer p {
     font-size: 1.5rem;
 }
+
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Ensure links work on mobile */
+footer a {
+    word-wrap: break-word; /* Helps with long URLs */
 }
